@@ -1,9 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "@/styles/Home.module.css";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Shows from "@/components/Shows";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,7 +19,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <h2 className='text-red-500'>Hello World</h2>
+
+      <Navbar />
+
+      <section id='/' >
+        <Hero />
+      </section>
+
+      <section id='shows' >
+        <Shows />
+      </section>
+
+      <section id='about' >
+        <About />
+      </section>
+
+      <section id='contact' >
+        <Contact />
+      </section>
     </>
-  )
+  );
 }
